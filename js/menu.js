@@ -3,18 +3,18 @@ const menu = document.querySelector('.menu')
 const menuLinks = menu.querySelectorAll('.menu-list__item')
  
 burger.addEventListener('click', () => {
-  menu.classList.add('menu-active')
+  menu.classList.toggle('menu-active')
 })
 
 menuLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    menu.classList.remove('menu-active')
+    menu.classList.toggle('menu-active')
   })
 })
 
 document.addEventListener('click', (event) => {
   if (!(event.target.closest('.menu') || event.target.closest('.humburger-menu'))) {
-    menu.classList.remove('menu-active')
+    menu.classList.toggle('menu-active')
   }
   
 })

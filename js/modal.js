@@ -5,15 +5,15 @@ const closeButton = modal.querySelector('.modal__close')
 
 modalButton.forEach((link) => {
     link.addEventListener('click', () => {
-    modal.classList.remove('hidden')
+    modal.classList.toggle('hidden')
   })
 })
 
 
 overlay.addEventListener('click', () => {
-  modal.classList.add('hidden')
+  modal.classList.toggle('hidden')
 })
 
 closeButton.addEventListener('click', () => {
-  modal.classList.add('hidden')
+  modal.classList.toggle('hidden')
 })
